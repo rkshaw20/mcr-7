@@ -12,14 +12,26 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home';
+import Continent from './pages/Continent';
+import Category from './pages/Category';
+import List from './pages/List';
+import Details from './pages/DetailsPage';
 
 const router = createBrowserRouter([
 
   {
-    path:'/',element:<Home/>
+    path:'/',element:<Continent/>
   },
- 
+  {
+    path:'/continent/:categoryId',element:<Category/>
+  },
+  {
+    path:'/countries/:countriesId',element:<List/>
+  },
+  {
+    path:'/destination/:destinationId',element:<Details/>
+  },
+
 
 ]);
 function App() {
